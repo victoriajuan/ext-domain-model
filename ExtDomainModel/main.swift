@@ -8,8 +8,6 @@
 
 import Foundation
 
-print("Hello, World!")
-
 public func testMe() -> String {
     return "I have been tested"
 }
@@ -42,6 +40,8 @@ extension Double {
 public struct Money {
     public var amount : Int
     public var currency : String
+    
+    var description: String { return "\(currency)\(Double(amount))" }
     
     public func convert(_ to: String) -> Money {
         if currency == "USD"{
@@ -102,6 +102,16 @@ open class Job {
     fileprivate var title : String
     fileprivate var type : JobType
     
+    var description: String {
+        switch type {
+        case .Hourly(let income) :
+            return "\(title)\(income)"
+        case .Salary(let income) :
+            return "\(title)\(income)"
+        }
+    }
+
+    
     public enum JobType {
         case Hourly(Double)
         case Salary(Int)
@@ -138,6 +148,10 @@ open class Person {
     open var firstName : String = ""
     open var lastName : String = ""
     open var age : Int = 0
+    
+    var description : String {
+        return "\(firstName)\(lastName)\(age)"
+    }
     
     fileprivate var _job : Job? = nil
     open var job : Job? {
@@ -179,6 +193,14 @@ open class Person {
 //
 open class Family {
     fileprivate var members : [Person] = []
+    
+    var description: String {
+        var des = ""
+        for member in members {
+            des.append(member.description + " ")
+        }
+        return des
+    }
     
     public init(spouse1: Person, spouse2: Person) {
         if spouse1.spouse == nil && spouse2.spouse == nil {

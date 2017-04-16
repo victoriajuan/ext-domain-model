@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		588AB2271EA0AFDD00E6407E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AB2261EA0AFDD00E6407E /* main.swift */; };
-		588AB2341EA196E400E6407E /* ExtDomainModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AB2331EA196E400E6407E /* ExtDomainModelTest.swift */; };
+		588AB23D1EA1A2F100E6407E /* ExtDomainModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AB2331EA196E400E6407E /* ExtDomainModelTest.swift */; };
+		588AB23F1EA1A43300E6407E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AB2261EA0AFDD00E6407E /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -184,7 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				588AB2341EA196E400E6407E /* ExtDomainModelTest.swift in Sources */,
+				588AB23F1EA1A43300E6407E /* main.swift in Sources */,
+				588AB23D1EA1A2F100E6407E /* ExtDomainModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +348,7 @@
 				588AB22C1EA0AFDD00E6407E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		588AB2361EA196E400E6407E /* Build configuration list for PBXNativeTarget "ExtDomainModelTest" */ = {
 			isa = XCConfigurationList;
@@ -354,6 +357,7 @@
 				588AB2381EA196E400E6407E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
